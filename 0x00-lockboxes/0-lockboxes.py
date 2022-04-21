@@ -7,6 +7,8 @@ from multiprocessing.connection import wait
 
 def canUnlockAll(boxes):
     """determines if all the boxes can be opened"""
+    if (not isinstance(boxes, list) or not len(boxes)):
+        return False
     pending_boxes = [0]
     visited_boxes = []
     while len(pending_boxes):
