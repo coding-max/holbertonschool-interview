@@ -9,7 +9,7 @@ def canUnlockAll(boxes):
     """determines if all the boxes can be opened"""
     pending_boxes = [0]
     visited_boxes = []
-    while len(pending_boxes) > 0:
+    while len(pending_boxes):
         if (pending_boxes[0] < len(boxes)):
             for key in boxes[pending_boxes[0]]:
                 if (isinstance(key, int) and
